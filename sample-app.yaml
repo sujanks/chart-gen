@@ -1,0 +1,17 @@
+# Microservice template
+name: first-app
+tag: 1.0
+owner: cool-team
+replicas: 1
+cpu: "500m"
+memory: "128Mi"
+livenessProbe: /health
+readinessProbe: /health
+
+env:
+  - name: db_url
+    value: "jdbc://localhost:3306/sample"
+  - name: db_username
+    value: "root"
+  - name: db_password
+    value: "root"
