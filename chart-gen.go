@@ -12,10 +12,9 @@ func main() {
 		fmt.Println("Missing release name")
 		os.Exit(0)
 	}
-
-	appYaml := process.Read("sample-app.yaml")
 	releaseName := os.Args[1]
+	configFile := "sample-app.yaml"
 
-	fmt.Printf("Preparing for release: %s", releaseName)
-	process.Generator(appYaml, releaseName)
+	process.Generator(releaseName, configFile)
+	fmt.Println("Helm chart generated under folder tmp for release: ", releaseName)
 }

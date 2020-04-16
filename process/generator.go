@@ -7,7 +7,9 @@ import (
 	"os"
 )
 
-func Generator(appYaml *[]byte, rName string) {
+func Generator(rName string, configFile string) {
+
+	appYaml := Read(configFile)
 
 	app := model.Application{}
 	app.UnmarshalYaml(appYaml)
