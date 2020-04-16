@@ -1,6 +1,6 @@
 # Chart-Gen
----
-Application to generate Helm chart for a based on some given values
+
+Application to generate Helm chart based on some given values
 
 ### Example
 Takes a argument as release name
